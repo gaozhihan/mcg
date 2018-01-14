@@ -1,6 +1,6 @@
 
 %% Demo to show the results of MCG
-clear all;close all;home;
+clear all;close all;
 
 data_mat_path = '/home/data/gaozhihan/GitRepo/denoise_MIL/temp_data/data_mat';
 rp_mat_path = '/home/data/gaozhihan/GitRepo/denoise_MIL/temp_data/rp_mat';
