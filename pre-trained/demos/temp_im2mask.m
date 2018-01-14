@@ -8,6 +8,7 @@ file_list = dir(data_mat_path);
 num_data = (length(file_list) - 2) / 6; % do not count '.' and '..'
 
 for idx = 0:(num_data - 1)
+    fprintf(sprintf('loading data seq_%d.mat\n', idx));
     load(fullfile(data_mat_path, sprintf('seq_%d.mat', idx)), '-mat');
     seq = uint8(seq * 255);
     seq_size = size(seq);

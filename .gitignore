@@ -2,3 +2,4 @@ benchmark/results/Pascal
 benchmark/results/SBD
 benchmark/results/COCO
 *.jpg
+*.mat
