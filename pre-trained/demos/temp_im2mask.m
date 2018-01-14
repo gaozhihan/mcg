@@ -16,7 +16,7 @@ for idx = 0:(num_data - 1)
     rp_batch_dir = fullfile(rp_mat_path, sprintf('rp_%d', idx));
     mkdir(rp_batch_dir);
     for batch_idx = 1:batch_size
-        frame = seq(seq_len, batch_idx, 1, :, :);
+        frame = squeeze(seq(seq_len, batch_idx, 1, :, :));
         [candidates_mcg, ucm2_mcg] = im2mcg(frame, 'accurate', 1);
         region_proposal = candidates_mcg.masks;
         rp_path = fullfile(rp_batch_dir, sprintf('rp_%d_idx_%d', idx, batch_idx - 1));
