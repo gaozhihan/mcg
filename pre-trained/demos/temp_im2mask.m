@@ -6,8 +6,11 @@ data_mat_path = '/home/data/gaozhihan/GitRepo/denoise_MIL/temp_data/data_mat';
 rp_mat_path = '/home/data/gaozhihan/GitRepo/denoise_MIL/temp_data/rp_mat';
 file_list = dir(data_mat_path);
 num_data = (length(file_list) - 2) / 6; % do not count '.' and '..'
+idx_start = 0;
+idx_end = 100;
 
-for idx = 0:(num_data - 1)
+% for idx = 0:(num_data - 1)
+for idx = idx_start:idx_end
     fprintf(sprintf('loading data seq_%d.mat\n', idx));
     load(fullfile(data_mat_path, sprintf('seq_%d.mat', idx)), '-mat');
     seq = uint8(seq * 255);
