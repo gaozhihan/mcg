@@ -2,8 +2,6 @@ function [ consumed_time ] = Generate_RP( idx_start, idx_end, gpu_idx )
 gpuDevice(gpu_idx)
 data_mat_path = '/home/data/gaozhihan/GitRepo/denoise_MIL/temp_data/data_mat';
 rp_mat_path = '/home/data/gaozhihan/GitRepo/denoise_MIL/temp_data/rp_mat';
-idx_start = 0;
-idx_end = 100;
 
 % for idx = 0:(num_data - 1)
 tic;
