@@ -3,7 +3,7 @@
 clear all;close all;home;
 
 % Read an input image
-I = imread(fullfile(mcg_root, 'demos','000000.jpg'));
+I = imread(fullfile(mcg_root, 'demos','00000.jpg'));
 
 % tic;
 % % Test the 'fast' version, which takes around 5 seconds in mean
