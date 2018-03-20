@@ -29,7 +29,7 @@ for idx = idx_start: idx_end
         region_proposal = candidates_mcg.masks;
         save(rp_path, 'region_proposal');
         consumed_time = toc;
-        disp(['consumed_time: ', consumed_time])
+        disp(['consumed_time: ', num2str(consumed_time)])
     end
 end
            
