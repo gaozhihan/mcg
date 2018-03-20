@@ -27,7 +27,7 @@ for idx = idx_start: idx_end
         frame = imread(frame_path);
         [candidates_mcg, ~] = im2mcg(frame, 'accurate', 1);
         region_proposal = candidates_mcg.masks;
-        save(rp_path, 'region_proposal');
+        save(rp_path, 'region_proposal', '-v7.3');
         consumed_time = toc;
         disp(['consumed_time: ', num2str(consumed_time)])
     end
