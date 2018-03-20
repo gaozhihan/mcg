@@ -14,9 +14,9 @@ for idx = idx_start: idx_end
     
     frame_list = dir(sequence_dir);
     frame_list = frame_list(3: end);
-    for frame_ele = frame_list
+    for frame_idx = 1:length(frame_list)
         tic;
-        frame_name = frame_ele.name;
+        frame_name = frame_list(frame_idx).name;
         disp(['generating rps for frame ', data_list(idx).name, ', ', frame_name]);
         frame_path = fullfile(sequence_dir, frame_name);
         
