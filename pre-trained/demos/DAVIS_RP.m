@@ -21,7 +21,7 @@ for idx = idx_start: idx_end
         frame_path = fullfile(sequence_dir, frame_name);
         
         [~, rp_name, ~] = fileparts(frame_name);
-        rp_name = [rp_name, '.mat'];
+%         rp_name = [rp_name, '.mat'];
         rp_path = fullfile(rp_sequence_dir, rp_name);
         
         frame = imread(frame_path);
