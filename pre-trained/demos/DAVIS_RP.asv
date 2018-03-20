@@ -1,0 +1,16 @@
+function [ consumed_time ] = DAVIS_RP( idx_start, idx_end, gpu_idx )
+
+data_root_dir = '/home/data/gaozhihan/project/davis-2017/data/DAVIS/JPEGImages/480p';
+rp_root_dir = '/home/data/gaozhihan/project/davis-2017/data/DAVIS/RegionProposals/480p';
+data_list = dir(data_root_dir); 
+data_list = data_list(3: end); % the first two elements are "." and ".."
+
+gpuDevice(gpu_idx)
+for idx = idx_start: idx_end
+    di
+    sequence_dir = fullfile(data_root_dir, data_list(idx).name);
+    frame_list = dir(sequence_dir);
+    frame_list = frame_list(3: end);
+    for frame_ele = frame_list
+        frame_path = frame_ele.name;
+        
