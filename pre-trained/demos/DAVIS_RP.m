@@ -10,6 +10,7 @@ for idx = idx_start: idx_end
     disp(['generating rps for sequence ', data_list(idx).name]);
     sequence_dir = fullfile(data_root_dir, data_list(idx).name);
     rp_sequence_dir = fullfile(rp_root_dir, data_list(idx).name);
+    mkdir(rp_sequence_dir);
     
     frame_list = dir(sequence_dir);
     frame_list = frame_list(3: end);
